@@ -63,7 +63,7 @@ pub fn init_pyo3() {
     });
 }
 
-#[cfg(unix)]
+// FIXME: this doesn't work on windows
 pub(crate) fn initialize_venv(venv_path: &Path) -> Result<(), VenvError> {
     use std::process::Command;
 
